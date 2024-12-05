@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salim's Salary</title>
+</head>
+<body>
+  <script>
+    function calculateMoney() {
+      //inputs
+      const salary = prompt("Enter salary: ");
+      const month = prompt("Enter month: ")
+      const savings_percent = prompt("Enter savings percentage: ")
+      const rent_percent = prompt("Enter rent percentage: ")
+      const electricity_percent = prompt("Enter electricity percentage: ")
+
+      //calculations
+      const savings = (savings_percent / 100) * salary;
+      const rent = (rent_percent / 100) * salary;
+      const electricity = (electricity_percent / 100) * salary;
+
+      const total_amount = savings + rent + electricity;
+      const remainder = salary - total_amount;
+
+      const yearly_rent = rent * 12;
+      const yearly_electricity = electricity * 12;
+
+      const double_salary = salary * salary
+
+      //output
+      console.log("Month: " + month);
+      console.log("Salary: $" + salary);
+      console.log("Savings: $" + savings);
+      console.log("Rent: $" + rent);
+      console.log("Electricity: $" + electricity);
+      console.log("Total_amount: $" + total_amount);
+      console.log("Remainder: $" + remainder);
+      console.log("Yearly Rent: $" + yearly_rent);
+      console.log("Yearly Electricity: $" + yearly_electricity);
+      console.log("Double Salary: $" + double_salary);
+    }
+    
+    calculateMoney()
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyramid of numbers</title>
+</head>
+<body>
+  <script>
+    let x = prompt("enter x:"); 
+    
+    if (x > 0) {
+      let result = ""; //to store pyramid baaden
+
+      for (let i = 1; i <= x; i++) {
+        for (let j = 1; j <= i; j++) {
+          result = result + j + " "; //add rows
+        }
+        result += "\n"; //next line
+      } 
+      alert(result); //display pyramid
+    }
+    else {
+      alert("Invalid number")
+    }
+  </script>
+
+  
+</body>
+</html>

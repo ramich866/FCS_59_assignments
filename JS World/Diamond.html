@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond</title>
+</head>
+<body>
+  <script>
+    function makeDiamond(rows) {
+      pattern = "";
+
+      //upper half (w/ mid row)
+      for(i = 1; i <= rows; i++) {
+        let spaces = "";
+        let stars = "";
+
+        //create spaces
+        for (let j = 0; j < rows - i; j++) {
+          spaces += " ";
+        }
+
+        //create stars
+        for (let j = 0; j < (2 * i) - 1; j++) {
+          stars += "*";
+        }
+        //add to pattern
+        pattern += spaces + stars + "\n";
+      }
+
+       // lower half
+    for (let i = rows - 1; i >= 1; i--) {
+        let spaces = "";
+        let stars = "";
+        
+        // create spaces
+        for (let j = 0; j < rows - i; j++) {
+            spaces += " ";
+        }
+
+        // create stars
+        for (let j = 0; j < 2 * i - 1; j++) {
+            stars += "*";
+        }
+
+        // add to pattern
+        pattern += spaces + stars + "\n";
+    }
+
+    return pattern;
+
+    }
+
+    // user input
+  let rows = prompt("Enter the number of rows:");
+
+    if (rows > 0) {
+        console.log(makeDiamond(rows));
+      } 
+    else {
+        console.log("Invalid number");
+      }
+  </script>
+</body>
+</html>
