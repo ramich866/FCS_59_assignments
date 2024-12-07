@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stonks</title>
+</head>
+<body>
+  <script>
+    function max_profit(prices) {
+    
+      let min_price = prices[0]; 
+      let max_profit = 0;
+
+      for(let i = 1; i < prices.length; i++) {
+        const profit = prices[i] - min_price; 
+        //get profit if selling at prices[i]
+
+        if (profit > max_profit) {
+          max_profit = profit;
+          // update max profit
+        }
+
+        if (prices[i] < min_price) {
+          min_price = prices[i];
+          // update min price 
+        }
+      }
+
+      return max_profit
+    }
+    
+    console.log(max_profit([10,9,5,4,19,2]))
+    console.log(max_profit([3,4,56,8,9,2])) 
+    console.log(max_profit([9,5,4])) //mafrud 0
+
+  </script>
+  
+</body>
+</html>
